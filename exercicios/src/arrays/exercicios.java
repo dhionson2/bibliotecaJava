@@ -1,6 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class exercicios {
 
@@ -14,14 +15,34 @@ public class exercicios {
 		System.out.println(Arrays.toString(notasAlunoA));
 		
 		//somando as notas
-		double total = 0;		
+		double totalAlunoA = 0;		
 		for(int i = 0; i < notasAlunoA.length; i++) {
-			total += notasAlunoA[i];
+			totalAlunoA += notasAlunoA[i];
 		}
 		//tirando a media das notas
-		double mediaNotas = total/notasAlunoA.length;
-		System.out.println("A média das notas é : "+mediaNotas);
+		double mediaAlunoA = totalAlunoA/notasAlunoA.length;
+		System.out.println("A média das notas do aluno A : "+mediaAlunoA);
 		
+		//outra forma de criar um array
+		double[] notasAlunoB = {6.7, 8.8, 3.1, 9.5};
+		double totalAlunoB = 0;
+		for(int i = 0; i < notasAlunoB.length; i++) {
+			totalAlunoB += notasAlunoB[i];
+		}
+		double mediaAlunoB = totalAlunoB/notasAlunoB.length;
+		
+		System.out.println("A média das notas do aluno B : "+mediaAlunoB);
+		
+		if(mediaAlunoA >= 7.0) {
+			System.out.println("O aluno A passou por média, sua média foi"+mediaAlunoA +"!");
+		}else {
+			System.out.println("O aluno A nao passou tirou média inferior a 7.0, sua média foi : "+mediaAlunoA);
+		}
+		if(mediaAlunoB >= 7.0) {
+			System.out.println("O aluno B passou por média, sua média foi : "+mediaAlunoB +"!");
+		}else {
+			System.out.println("O aluno B nao passou tirou média inferior a 7.0, sua média foi : "+mediaAlunoB);
+		}
 	}
 	
 }
