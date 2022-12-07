@@ -14,6 +14,10 @@ public class Pilha {
 		
 		System.out.println(livros.peek());// ele mostra o ultimo adicionado para o primeiro
 		System.out.println(livros);
+		
+		for(String livro: livros) {
+			System.out.println(livro);
+		}
 	}
 	
 }
